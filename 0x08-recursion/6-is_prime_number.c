@@ -25,7 +25,5 @@ else
  */
 int is_prime_number(int n)
 {
-	if (n == 2)
-		return (1);
-	return (prime_check(2, n));
+return (is_prime(n, 1));
 }
