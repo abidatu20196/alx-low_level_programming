@@ -3,34 +3,21 @@
 #include <stdio.h>
 
 /**
- * create_array - creates an array of chars,
- * and initializes it with a specific char.
- * @size: size of the array
- * @c: character to insert
- * Return: NULL if size = 0 or if it fails
- * a pointer to the array if it is normal
+ * create_array - this function creates an array of char
+ * @size: an integer parameter, the size of the array
+ * @arr: a char parameter, which is the array
+ * Return: if successsful, return pointer to the array, else null
  */
-char *create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char arr)
 {
-	char *s;
+	char *array_alloc = malloc(size * sizeof(char));
 	unsigned int i;
 
-	if (size == 0)
-	{
-	return (NULL);
-	}
+	if (size == 0 || array_alloc == NULL)
+		return (NULL);
 
-	s = malloc((size) * sizeof(char));
-	if (s == NULL)
-	{
-	return (NULL);
-	}
-	i = 0;
-	while (i < size)
-	{
-		s[i] = c;
-		i++;
-	}
-	s[i] = '\0';
-	return (s);
+	for (i = 0; i < size; i++)
+		array_alloc[i] = arr;
+
+	return (array_alloc);
 }
