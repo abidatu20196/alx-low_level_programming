@@ -4,12 +4,12 @@
 #include <stdio.h>
 
 /**
- * * _strdup - this function allocates space in memory for a copy of the
- * * string given as a parameter
- * * @str: string to be copied
- * * Return: if successful, a pointer to the duplicated string; Null if
- * * failed or insufficient memory was allocated
- * */
+ * _strdup - this function allocates space in memory for a copy of the
+ * string given as a parameter
+ * @str: string to be copied
+ * Return: if successful, a pointer to the duplicated string; Null if
+ * failed or insufficient memory was allocated
+ */
 char *_strdup(char *str)
 {
 	int size = 0;
